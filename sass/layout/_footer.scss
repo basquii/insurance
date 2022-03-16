@@ -1,0 +1,140 @@
+.footer {
+  background: $light-gray;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.52rem;
+  letter-spacing: 0.15rem;
+  font-weight: bold;
+  padding: 8.8rem 0 0;
+  position: relative;
+  z-index: 2;
+  overflow-x: hidden;
+
+  @include med {
+    padding: 6.4rem 0 0 0;
+  }
+
+  &::before {
+    content: url(/images/bg-pattern-footer-mobile.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    @include med {
+      content: url(/images/bg-pattern-footer-desktop.svg);
+    }
+  }
+
+  h3 {
+    padding-bottom: 3.6rem;
+    color: $grayish-violet;
+  }
+
+  ul {
+    padding-bottom: 4rem;
+  }
+
+  hr {
+    width: 100%;
+    margin-bottom: 3.9rem;
+    opacity: 0.5;
+  }
+
+  &__top {
+    @include med {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footerLogo {
+      width: 11.12rem;
+      margin: 0 auto;
+      padding: 0.3rem 0 3.2rem;
+    }
+
+    .icons {
+      display: grid;
+      grid-template-columns: repeat(4, 2.4rem);
+      column-gap: 1.6rem;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 3.6rem;
+
+      @include med {
+        padding-bottom: 3rem;
+      }
+
+      svg {
+        fill: #837d88;
+        transition: all 0.2s ease;
+
+        &:hover {
+          fill: $dark-violet;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    @include med {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: left;
+      grid-gap: 3rem;
+      padding: 0.8rem 0 0.9rem;
+    }
+  }
+
+  .about {
+    li:not(:last-child) {
+      padding-bottom: 1.6rem;
+    }
+
+    a {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: $dark-violet;
+      position: relative;
+    }
+  }
+}
+
+.underline {
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    transition: $animate;
+    opacity: 1;
+    background-color: $dark-violet;
+    left: 0;
+  }
+  &:hover {
+    &:before {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  text-transform: initial;
+  letter-spacing: normal;
+
+  a {
+    font-size: inherit;
+    color: $grayish-violet;
+    text-decoration: none;
+    letter-spacing: normal;
+  }
+
+  a:hover {
+    color: rgb(255, 20, 39);
+    text-decoration: underline;
+  }
+}

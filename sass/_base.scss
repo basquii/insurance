@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+//VARIABLES
+//Colors
+$dark-violet: hsl(256, 26%, 20%);
+$grayish-blue: hsl(216, 30%, 68%);
+$deep-violet: hsl(270, 9%, 17%);
+$grayish-violet: hsl(273, 4%, 51%);
+$light-gray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+//Fonts
+$font-heading: "DM Serif Display", serif;
+$font-body: "Karla", sans-serif; //400,700
+//Transitions
+$animate: all 0.3s ease-in-out;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+//MEDIA QUERIES
+@mixin med {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+//RESET
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+//MAIN STYLES
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-body;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2 {
+  font-family: $font-heading;
+  color: $white;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+  font-size: 2rem;
+  padding: 1.2rem;
+  letter-spacing: 1.36px;
+  font-weight: 400;
+  transition: 0.2s ease;
+
+  &:hover {
+    color: $grayish-blue;
+  }
+
+  @include med {
+    color: $grayish-violet;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+    padding: 0;
+
+    &:hover {
+      color: $dark-violet;
+    }
+  }
+}

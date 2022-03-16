@@ -1,0 +1,110 @@
+.container {
+  max-width: 111rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.cta {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: 1.5px solid #fff;
+  color: $white;
+  transition: $animate;
+  height: 4rem;
+
+  &:hover {
+    background: $white;
+    color: $dark-violet;
+  }
+
+  &--nav {
+    font-family: $font-body;
+    letter-spacing: 1.36px;
+    font-size: 2rem;
+    width: 87%;
+    max-width: 34rem;
+    padding: 1.2rem 2.65rem;
+
+    @include med {
+      background: none;
+      color: $dark-violet;
+      font-size: 1.3rem;
+      letter-spacing: 1.5px;
+      font-weight: bold;
+      border: 1px solid $dark-violet;
+      width: 14.6rem;
+
+      &:hover {
+        background: $dark-violet;
+        color: $white;
+      }
+    }
+  }
+
+  &--hero {
+    width: 14.6rem;
+    height: 4rem;
+    font-weight: bold;
+    line-height: 1.52rem;
+    letter-spacing: 1.5px;
+    justify-self: center;
+    padding: 1.2rem;
+    margin-top: 1.4rem;
+
+    @include med {
+      margin-top: 0;
+      justify-self: left;
+      width: auto;
+      padding: 1.15rem 2.65rem;
+    }
+
+    @include lg {
+      margin-top: 1.6rem;
+    }
+  }
+
+  &--action {
+    letter-spacing: 0.15rem;
+    line-height: 1.52rem;
+    padding: 1rem 2.5rem;
+
+    @include lg {
+      padding: 1rem 2.2rem;
+    }
+  }
+}
+
+.horizontal {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 15rem;
+  }
+
+  &--hero {
+    &::before {
+      display: none;
+      border-top: 1px solid #fff;
+      top: -6.4rem;
+
+      @include lg {
+        display: block;
+      }
+    }
+  }
+
+  &--features {
+    &::before {
+      border-top: 1px solid #c396c6;
+      left: 50%;
+      margin: -3.2rem 0 0 -7.5rem;
+
+      @include lg {
+        left: unset;
+        margin: -4.6rem 0 0 0;
+      }
+    }
+  }
+}
