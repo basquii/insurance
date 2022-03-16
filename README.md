@@ -18,10 +18,7 @@ User Stories:
   <img src="images/insure-landing-page.gif">
 </p>
 <p align="center">
-  <img src="images/insure-landing-page.gif">
-</p>
-<p align="center">
-   Solution preview by <a href="https://www.frontendmentor.io/solutions/css-html-flexbox-media-queries-G0l6ggg5i</a>
+   Solution preview by <a href="https://www.frontendmentor.io/solutions/css-html-flexbox-media-queries-G0l6ggg5i"</a>
 </p>
 
 ### What I learned 🚀
